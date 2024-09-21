@@ -1,2 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
+using Allan.Ativ_Conta_Bancaria.Models;
+using System.Reflection.Metadata;
+{
+
+}
+
