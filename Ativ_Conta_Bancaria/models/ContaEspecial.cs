@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace Allan.Ativ_Conta_Bancaria.Models;
 
 internal class ContaEspecial
 {
-    public string TitularDaConta { get; set; }      
+    public string TitularDaConta { get; set; }
     public string NumerodaConta { get; set; }
     public double Saldo { get; set; }
     public double Limite { get; set; }
@@ -26,25 +27,38 @@ internal class ContaEspecial
     {
         if (valor <= this.Saldo + this.Limite)
         {
-            this.Saldo -= valor;
-            Console.WriteLine($"Saque de R${valor} realizado com Sucesso. Saldo atual é: R${this.Saldo}");
+            if (valor > this.Saldo)
+            {
+                double valorUsandoLimite = valor - this.Saldo;
+                this.Saldo = 0;
+                this.Limite -= valorUsandoLimite;
+                Console.WriteLine($"Saque de R${valor} realizado com Sucesso. Saldo atual é: R${this.Saldo}");
+            }
+            else
+            {
+                this.Saldo -= valor;
+                Console.WriteLine($"Saque de R${valor} realizado com Sucesso. Saldo atual é: R${this.Saldo}");
+            }
         }
         else
         {
-
+            this.Saldo -= valor;
             Console.WriteLine("Saque não permitido. O valor inserido excede o saldo e o limite.");
         }
-    }
-    //Retonar o método de exibir os dados Conta Especial
-    public string ExibirDadosConta()
-    {
+        }
+        //Retonar o método de exibir os dados Conta Especial
+        public string ExibirDadosConta()
+        {
 
-        return
-            $"Titular: {TitularDaConta}," +
-            $" Número da Conta: {NumerodaConta}," +
-            $" Saldo: R$ {Saldo}," +
-            $" Limite Disponivel: R$ {Limite}";
+            return
+                $"Titular: {TitularDaConta}," +
+                $" Número da Conta: {NumerodaConta}," +
+                $" Saldo: R$ {Saldo}," +
+                $" Limite Disponivel: R$ {Limite}";
 
-    }
+        }
+    
 }
 
+
+ 
