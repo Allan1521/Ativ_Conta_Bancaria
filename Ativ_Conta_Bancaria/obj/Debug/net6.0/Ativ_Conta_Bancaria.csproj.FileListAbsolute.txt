@@ -1,0 +1,15 @@
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\obj\Debug\net6.0\Ativ_Conta_Bancaria.csproj.AssemblyReference.cache
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\obj\Debug\net6.0\Ativ_Conta_Bancaria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\obj\Debug\net6.0\Ativ_Conta_Bancaria.AssemblyInfoInputs.cache
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\obj\Debug\net6.0\Ativ_Conta_Bancaria.AssemblyInfo.cs
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\obj\Debug\net6.0\Ativ_Conta_Bancaria.csproj.CoreCompileInputs.cache
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\bin\Debug\net6.0\Ativ_Conta_Bancaria.exe
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\bin\Debug\net6.0\Ativ_Conta_Bancaria.deps.json
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\bin\Debug\net6.0\Ativ_Conta_Bancaria.runtimeconfig.json
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\bin\Debug\net6.0\Ativ_Conta_Bancaria.dll
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\bin\Debug\net6.0\Ativ_Conta_Bancaria.pdb
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\obj\Debug\net6.0\Ativ_Conta_Bancaria.dll
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\obj\Debug\net6.0\refint\Ativ_Conta_Bancaria.dll
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\obj\Debug\net6.0\Ativ_Conta_Bancaria.pdb
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\obj\Debug\net6.0\Ativ_Conta_Bancaria.genruntimeconfig.cache
+C:\Users\allan.mlima1\source\repos\Sln_Ativ_Conta_Bancaria\Ativ_Conta_Bancaria\obj\Debug\net6.0\ref\Ativ_Conta_Bancaria.dll
