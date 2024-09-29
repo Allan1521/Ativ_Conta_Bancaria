@@ -15,13 +15,13 @@ internal class ContaEspecial
     public double Saldo { get; set; }
     public double Limite { get; set; }
 
-    public ContaEspecial(string titularDaConta, string numerodaConta, double Saldo,
+    public ContaEspecial(string titularDaConta, string numerodaConta, double saldo,
     double limite)
     {
         this.TitularDaConta = titularDaConta;
         this.NumerodaConta = numerodaConta;
         this.Limite = limite;
-        this.Saldo = Saldo;
+        this.Saldo = saldo;
     }
     public void Sacar(double valor)
     {
@@ -32,18 +32,17 @@ internal class ContaEspecial
                 double valorUsandoLimite = valor - this.Saldo;
                 this.Saldo = 0;
                 this.Limite -= valorUsandoLimite;
-                Console.WriteLine($"Saque de R${valor} realizado com Sucesso. Saldo atual é: R${this.Saldo}");
+                Console.WriteLine($"Saque de R${valor} realizado com Sucesso. Saldo atual é: R${this.Saldo}, o limite é de : {this.Limite}");
             }
             else
             {
                 this.Saldo -= valor;
-                Console.WriteLine($"Saque de R${valor} realizado com Sucesso. Saldo atual é: R${this.Saldo}");
+                Console.WriteLine($"Saque de R${valor} realizado com Sucesso. Saldo atual é: R${this.Saldo}, O Limite disponível é : R$ {this.Limite}");
             }
         }
         else
-        {
-            this.Saldo -= valor;
-            Console.WriteLine("Saque não permitido. O valor inserido excede o saldo e o limite.");
+        {       
+                Console.WriteLine("Saque não permitido. O valor inserido excede o saldo e o limite.");
         }
         }
         //Retonar o método de exibir os dados Conta Especial

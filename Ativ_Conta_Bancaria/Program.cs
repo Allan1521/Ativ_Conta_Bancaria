@@ -1,38 +1,35 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Allan.Ativ_Conta_Bancaria.Models;
+using System.ComponentModel;
 using System.Reflection.Metadata;
 
 class Program
 {
-    private static string titularDaConta;
-    private static string numerodaConta;
-    private static double limite;
-    public static double Saldo;
-
+   
     static void Main()
     {
-        ContaEspecial Especial = new ContaEspecial(titularDaConta,numerodaConta, Saldo, limite);
-        // Coletando dados para a Conta Especial
+         // Coletando dados para a Conta Especial
         Console.WriteLine("\n Conta Especial:");
         Console.Write("Titular: ");
-        string esTitular = Console.ReadLine();
+        string titularDaConta = Console.ReadLine();
         Console.Write("Número da Conta: ");
-        string esNumeroConta = Console.ReadLine();
+        string numerodaConta = Console.ReadLine();
         Console.Write("Saldo: R$ ");
-        double esSaldo = Convert.ToDouble(Console.ReadLine());
+        double saldo = Convert.ToDouble(Console.ReadLine());
         Console.Write("Limite: R$ ");
-        double esLimite = Convert.ToDouble(Console.ReadLine());
-        //chamando o objecto da Conta Especial
-        ContaEspecial especial = new ContaEspecial(esTitular, esNumeroConta, esSaldo, esLimite);
+        double limite = Convert.ToDouble(Console.ReadLine());
+
+        ContaEspecial especial = new ContaEspecial(titularDaConta, numerodaConta, saldo, limite);
+
         //Mostrando os dados
         Console.WriteLine("\n Dados da Conta Especial:");
-        Console.WriteLine($"Titular: {especial.TitularDaConta}," +
-            $" Número: {especial.NumerodaConta}, " +
-            $"Saldo: {especial.Saldo}, " +
-            $"Limite Disponivel: {especial.Limite}");
-        // Instanciando ContaPoupanca
-        //ContaPoupanca poupanca = new ContaPoupanca();
+        Console.WriteLine(especial.ExibirDadosConta());
+            
+
+        Console.WriteLine("Sacar o Valor: ");
+        double saqueEspecial = Convert.ToDouble(Console.ReadLine()); //usuario digita o valor a sacar
+        especial.Sacar(saqueEspecial);
 
         // Coletando dados para a Conta Poupança
         Console.WriteLine("\n Conta Poupança:");
@@ -46,10 +43,14 @@ class Program
         ContaPoupanca poupanca = new ContaPoupanca(TitularPoupanca, NumeroContaPoupanca, SaldoPoupanca);
         //Mostrando os dados
         Console.WriteLine("\n Dados da Conta Poupança:");
-        Console.WriteLine($"Nome do Titular: {poupanca.TitularDaConta}, " +
-            $"Número: {poupanca.NumerodaConta}," +
-            $"Saldo: R$ {poupanca.Saldo}, " +
-            $"Data de Aniversário: {poupanca.DataAniversarioDaConta}");
+        Console.WriteLine(poupanca.ExibirDadosConta());
+
+        //Chamar método Sacar
+
+        Console.WriteLine("Sacar o Valor: ");
+        double saquePoupanca = Convert.ToDouble(Console.ReadLine()); //usuario digita o valor a sacar
+        poupanca.Sacar(saquePoupanca);
+
 
 
     }
