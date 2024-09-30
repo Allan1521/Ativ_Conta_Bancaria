@@ -44,9 +44,21 @@ internal class ContaEspecial
         {       
                 Console.WriteLine("Saque não permitido. O valor inserido excede o saldo e o limite.");
         }
+    }
+    public void deposito(double valor) //método depositar
+    {
+        if (valor >0)
+        {
+            this.Saldo += valor;
+            Console.WriteLine($" Depósito de R${valor} realizado com Sucesso. Saldo atual é: R${this.Saldo}");
         }
-        //Retonar o método de exibir os dados Conta Especial
-        public string ExibirDadosConta()
+        else
+        {
+            Console.WriteLine(" Saldo insuficiente para realizar depósito.");
+        }
+    }
+    //Retonar o método de exibir os dados Conta Especial
+    public string ExibirDadosConta()
         {
 
             return

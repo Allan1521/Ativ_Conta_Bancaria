@@ -13,18 +13,31 @@ namespace Allan.Ativ_Conta_Bancaria.Models
         public string NumerodaConta { get; set; }
         public double Saldo { get; set; }
         public DateTime DataAniversarioDaConta = DateTime.Now;
+        
 
         public ContaPoupanca() { }
         public void Sacar(double valor)
         {
             if (valor <= this.Saldo)
             {
-                this.Saldo = valor;
+                this.Saldo -= valor;
                 Console.WriteLine($"Saque de R${valor} realizado com Sucesso. Saldo atual é: R${this.Saldo}");
             }
             else
             {
                 Console.WriteLine("Saque não permitido. valor inserido execede o Saldo");
+            }
+        }
+        public void deposito(double valor)
+        {
+            if (valor > 0)
+            {
+                this.Saldo += valor;
+                Console.WriteLine($" Depósito de R${valor} realizado com Sucesso. Saldo atual é: R${this.Saldo}");
+            }
+            else
+            {
+                Console.WriteLine(" Saldo insuficiente");
             }
         }
         public ContaPoupanca(string TitularPoupanca, string NumeroContaPoupanca, double SaldoPoupanca)
