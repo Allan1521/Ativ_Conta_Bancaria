@@ -9,6 +9,9 @@ class Program
    
     static void Main()
     {
+<<<<<<< HEAD
+        ContaEspecial Especial = new ContaEspecial("Allan", "0001-01.02.03-1", 100);
+=======
          // Coletando dados para a Conta Especial
         Console.WriteLine("\n Conta Especial:");
         Console.Write("Titular: ");
@@ -75,6 +78,7 @@ class Program
 
 
 
+>>>>>>> bdd8af2b6257ec8d73e2cb4ef8885d0da7d111da
     }
 
 }
