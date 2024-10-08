@@ -50,9 +50,11 @@ class Program
         //chamando class objeto
         ContaPoupanca poupanca = new ContaPoupanca(TitularPoupanca, NumeroContaPoupanca, SaldoPoupanca);
         
-        //Mostrando os dados
+        //Mostrando os dados Poupança
         Console.WriteLine("\n Dados da Conta Poupança:");
         Console.WriteLine(poupanca.ExibirDadosConta());
+
+        poupanca.Transferir();
 
         //Chamar método Sacar
         Console.WriteLine("Sacar o Valor: ");
@@ -63,6 +65,11 @@ class Program
         Console.WriteLine("Fazer Depósito");
         double depositoPoup = Convert.ToDouble(Console.ReadLine()); //usuario digita o valor a depositar
         poupanca.deposito(depositoPoup);
+
+        ContaPoupanca contaUp = new ContaPoupanca("Fred", "34235", 1000.32);
+        ContaEspecial contaDown = new ContaEspecial("Sarah", "34411", 12400.88, 100.00);
+
+        contaUp.Transferir(contaDown, 5000);
 
 
 

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,8 +16,10 @@ namespace Allan.Ativ_Conta_Bancaria.Models
         public double Saldo { get; set; }
         public DateTime DataAniversarioDaConta = DateTime.Now;
         
-
+       
         public ContaPoupanca() { }
+        
+        // Método Sacar
         public void Sacar(double valor)
         {
             if (valor <= this.Saldo)
@@ -57,7 +61,31 @@ namespace Allan.Ativ_Conta_Bancaria.Models
                 $" Saldo: R$ {Saldo}, " +
                 $" Data de Aniversário: {DataAniversarioDaConta}";
         }
+        //Sobre carga de Métodos
 
+        //Promover para 
+        
+        public bool Transferir(ContaPoupanca pConta, double pValor)
+        {
+            this.Sacar(pValor);
+            pConta.deposito(pValor);
+            return true;
+        }
+        public bool Transferir(ContaEspecial pConta, double pValor)
+        {
+            try
+            {
+                this.Sacar(pValor);//estes métodos devem lançar exception em caso de erro
+                pConta.deposito(pValor);//estes métodos devem lançar exception em caso de erro
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+            
+        }
+           
     }
 }
     
