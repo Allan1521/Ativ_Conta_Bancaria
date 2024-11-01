@@ -12,6 +12,8 @@ namespace Allan.Ativ_Conta_Bancaria.Models
         public string TitularDaConta { get; set; }
         public string NumeroDaConta { get; set; }
         public double Saldo { get; set; }
+        public DateTime dataCriacaoConta { get; set; }
+        public string Senha { get; set; }
 
         //Método Sacar 
         public void Sacar(double valor)

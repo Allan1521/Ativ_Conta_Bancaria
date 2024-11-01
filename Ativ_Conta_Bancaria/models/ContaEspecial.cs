@@ -13,6 +13,7 @@ internal class ContaEspecial :Conta
     public string NumerodaConta { get; set; }
     public double Saldo { get; set; }
     public double Limite { get; set; }
+    public DateTime dataNascimento { get; set; }
 
     public ContaEspecial(string titularDaConta,string numerodaConta,double Saldo,double limite)
     {
